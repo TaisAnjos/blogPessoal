@@ -26,7 +26,7 @@ public class UsuarioService {
 			return Optional.of(repository.save(usuario));
 	}
 	
-	private String criptografarSenha(String senha) {
+	public String criptografarSenha(String senha) {
 
 		BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 		
