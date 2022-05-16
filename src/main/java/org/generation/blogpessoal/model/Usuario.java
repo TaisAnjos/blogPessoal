@@ -11,8 +11,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import io.swagger.v3.oas.annotations.media.Schema;
 
 @Entity
 @Table (name = "tb_usuario")
@@ -23,14 +26,17 @@ public class Usuario {
 	
 	private String nome;
 	
+	@Schema(example = "email@email.com.br")
+	@NotNull(message = "O atributo Usuário é Obrigatório!")
+	@Email(message = "O atributo Usuário deve ser um email válido!")
+	private String usuario;
+
+	
 	@NotBlank
 	private String senha;
 	
 	private String foto;
 	
-	@NotBlank
-	@Email (message = "Este não um email válido")
-	private String usuario;
 	
 	//ordem dos atributos do construtor tem que ser a mesma ordem da model
 		//construtor cheio
@@ -43,8 +49,10 @@ public class Usuario {
 		}
 		
 		//construtor vazio
-		public Usuario() {}
-
+		public Usuario() {
+			
+		}
+		
 	
 	@OneToMany (mappedBy = "usuario", cascade = CascadeType.ALL)
 	@JsonIgnoreProperties ("usuario")

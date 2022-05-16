@@ -26,6 +26,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class UsuarioControllerTest {
 	@Autowired
 	private TestRestTemplate testRestTemplate;
+
 	
 	@Autowired
 	private UsuarioService usuarioService;
