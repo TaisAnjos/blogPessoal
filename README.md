@@ -1,2 +1,2 @@
 # blogPessoal
-[Documentação - Blog Pessoal](https://github.com/TaisAnjos/blogPessoal/files/8708865/Projeto.Blog.Pessoal.pdf)
+[Documentação - Blog Pessoal](https://drive.google.com/file/d/1fGEtsVIUwWZRO9m_zE4Xj6gaLMHJcH1c/view?usp=sharing)
